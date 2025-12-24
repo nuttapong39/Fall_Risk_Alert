@@ -1,0 +1,86 @@
+[Wed 12/24/2025 10:12:48.41] *** RUN_FROM=Administrator ***    
+[Wed 12/24/2025 10:12:48.42] start
+[2025-12-24 10:12:48] Effective range: 2025-12-17 -> 2025-12-24
+[2025-12-24 10:12:48] Ingest: found 0 new rows.
+[2025-12-24 10:12:48] Send: to process 12 rows (cooldown=1m, maxTry=8).
+[2025-12-24 10:12:49] id=9 hn=0000001 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:49] OK id=9 ref=status:200
+[2025-12-24 10:12:49] id=10 hn=0010589 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:49] OK id=10 ref=status:200
+[2025-12-24 10:12:50] id=12 hn=0019997 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:50] OK id=12 ref=status:200
+[2025-12-24 10:12:51] id=24 hn=0015690 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:51] OK id=24 ref=status:200
+[2025-12-24 10:12:52] id=29 hn=0000001 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:52] OK id=29 ref=status:200
+[2025-12-24 10:12:52] id=37 hn=0000188 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:52] OK id=37 ref=status:200
+[2025-12-24 10:12:53] id=44 hn=0018710 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:53] OK id=44 ref=status:200
+[2025-12-24 10:12:54] id=47 hn=0062498 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:54] OK id=47 ref=status:200
+[2025-12-24 10:12:54] id=71 hn=0065346 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:54] OK id=71 ref=status:200
+[2025-12-24 10:12:55] id=73 hn=0062498 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:55] OK id=73 ref=status:200
+[2025-12-24 10:12:56] id=79 hn=0042315 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:56] OK id=79 ref=status:200
+[2025-12-24 10:12:56] id=82 hn=0006331 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:12:56] OK id=82 ref=status:200
+[Wed 12/24/2025 10:12:56.87] done
+[Wed 12/24/2025 10:16:02.36] *** RUN_FROM=Administrator ***    
+[Wed 12/24/2025 10:16:02.36] start
+[2025-12-24 10:16:02] Effective range: 2025-12-17 -> 2025-12-24
+[2025-12-24 10:16:02] Ingest: found 0 new rows.
+[2025-12-24 10:16:02] Send: to process 0 rows (cooldown=1m, maxTry=8).
+[Wed 12/24/2025 10:16:02.47] done
+[Wed 12/24/2025 10:17:48.43] *** RUN_FROM=Administrator ***    
+[Wed 12/24/2025 10:17:48.43] start
+[2025-12-24 10:17:48] Effective range: 2025-12-17 -> 2025-12-24
+[2025-12-24 10:17:48] Ingest: found 0 new rows.
+[2025-12-24 10:17:48] Send: to process 0 rows (cooldown=1m, maxTry=8).
+[Wed 12/24/2025 10:17:48.53] done
+[Wed 12/24/2025 10:21:02.36] *** RUN_FROM=Administrator ***    
+[Wed 12/24/2025 10:21:02.36] start
+[2025-12-24 10:21:02] Effective range: 2025-12-17 -> 2025-12-24
+[2025-12-24 10:21:02] Ingest: found 0 new rows.
+[2025-12-24 10:21:02] Send: to process 0 rows (cooldown=1m, maxTry=8).
+[Wed 12/24/2025 10:21:02.45] done
+[Wed 12/24/2025 10:22:48.47] *** RUN_FROM=Administrator ***    
+[Wed 12/24/2025 10:22:48.47] start
+[2025-12-24 10:22:48] Effective range: 2025-12-17 -> 2025-12-24
+[2025-12-24 10:22:48] Ingest: found 0 new rows.
+[2025-12-24 10:22:48] Send: to process 0 rows (cooldown=1m, maxTry=8).
+[Wed 12/24/2025 10:22:48.59] done
+[Wed 12/24/2025 10:26:02.36] *** RUN_FROM=Administrator ***    
+[Wed 12/24/2025 10:26:02.36] start
+[2025-12-24 10:26:02] Effective range: 2025-12-17 -> 2025-12-24
+[2025-12-24 10:26:02] Ingest: found 0 new rows.
+[2025-12-24 10:26:02] Send: to process 0 rows (cooldown=1m, maxTry=8).
+[Wed 12/24/2025 10:26:02.44] done
+[Wed 12/24/2025 10:27:48.43] *** RUN_FROM=Administrator ***    
+[Wed 12/24/2025 10:27:48.44] start
+[2025-12-24 10:27:48] Effective range: 2025-12-17 -> 2025-12-24
+[2025-12-24 10:27:48] Ingest: found 0 new rows.
+[2025-12-24 10:27:48] Send: to process 0 rows (cooldown=1m, maxTry=8).
+[Wed 12/24/2025 10:27:48.52] done
+[Wed 12/24/2025 10:31:02.36] *** RUN_FROM=Administrator ***    
+[Wed 12/24/2025 10:31:02.36] start
+[2025-12-24 10:31:02] Effective range: 2025-12-17 -> 2025-12-24
+[2025-12-24 10:31:02] Ingest: found 0 new rows.
+[2025-12-24 10:31:02] Send: to process 0 rows (cooldown=1m, maxTry=8).
+[Wed 12/24/2025 10:31:02.44] done
+[Wed 12/24/2025 10:32:48.44] *** RUN_FROM=Administrator ***    
+[Wed 12/24/2025 10:32:48.44] start
+[2025-12-24 10:32:48] Effective range: 2025-12-17 -> 2025-12-24
+[2025-12-24 10:32:48] Ingest: found 0 new rows.
+[2025-12-24 10:32:48] Send: to process 0 rows (cooldown=1m, maxTry=8).
+[Wed 12/24/2025 10:32:48.51] done
+[Wed 12/24/2025 10:36:02.36] *** RUN_FROM=Administrator ***    
+[Wed 12/24/2025 10:36:02.36] start
+[2025-12-24 10:36:02] Effective range: 2025-12-17 -> 2025-12-24
+[2025-12-24 10:36:02] Ingest: found 0 new rows.
+[2025-12-24 10:36:02] Send: to process 1 rows (cooldown=1m, maxTry=8).
+[2025-12-24 10:36:03] id=87 hn=0033032 http=200 err=- resp={"status":200,"message":"Succesfully"}
+[2025-12-24 10:36:03] OK id=87 ref=status:200
+[Wed 12/24/2025 10:36:03.22] done

@@ -1,0 +1,16 @@
+[08-Oct-2025 11:39:02 Asia/Bangkok] PHP Warning:  Constant FRACTURE_CLIENT_KEY already defined in C:\xampp\htdocs\HOSxLine\config.php on line 60
+[08-Oct-2025 11:39:02 Asia/Bangkok] PHP Warning:  Constant FRACTURE_SECRET_KEY already defined in C:\xampp\htdocs\HOSxLine\config.php on line 61
+[03-Nov-2025 14:59:02 Asia/Bangkok] PHP Warning:  Undefined variable $DB_USER in C:\xampp\htdocs\HOSxLine\config.php on line 20
+[03-Nov-2025 14:59:02 Asia/Bangkok] PHP Warning:  Undefined variable $DB_PASS in C:\xampp\htdocs\HOSxLine\config.php on line 20
+[03-Nov-2025 14:59:02 Asia/Bangkok] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\HOSxLine\config.php:21
+Stack trace:
+#0 C:\xampp\htdocs\HOSxLine\config.php(21): PDO->__construct('mysql:host='192...', NULL, NULL, Array)
+#1 C:\xampp\htdocs\HOSxLine\accident_worker.php(7): require_once('C:\\xampp\\htdocs...')
+#2 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\HOSxLine\config.php:21
+Stack trace:
+#0 C:\xampp\htdocs\HOSxLine\config.php(21): PDO->__construct('mysql:host='192...', NULL, NULL, Array)
+#1 C:\xampp\htdocs\HOSxLine\accident_worker.php(7): require_once('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\HOSxLine\config.php on line 21
