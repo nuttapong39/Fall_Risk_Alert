@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>โปรแกรมแจ้งเตือน | LineNotify</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body, .brand-text, .nav-link p { font-family: 'Prompt', sans-serif; }
+    .content-wrapper { padding: 20px; }
+    .table-responsive { overflow-x: auto; }
+
+    /* ให้สี/ตัวอักษรของสวิตช์รับตามสี navbar */
+    .main-header .custom-control-label { color: inherit; cursor: pointer; }
+    .main-header .custom-control-input { cursor: pointer; }
+
+    /* จัดระยะให้สวิตช์ดูพอดีในแถบนำทาง */
+    .main-header .custom-control.custom-switch .custom-control-label::before,
+    .main-header .custom-control.custom-switch .custom-control-label::after {
+      top: .25rem;
+    }
+
+    /* ===== Sidebar Logout Button (ติดล่าง) ===== */
+    .main-sidebar .sidebar{
+      position: relative;
+      min-height: calc(100vh - 57px); /* เผื่อความสูง brand-link โดยประมาณ */
+      padding-bottom: 70px;           /* กันเมนูทับปุ่มออกจากระบบ */
+    }
+    .sidebar-logout{
+      position: absolute;
+      left: .5rem;
+      right: .5rem;
+      bottom: .75rem;
+    }
+    .sidebar-logout .nav-link{
+      border-radius: .35rem;
+    }
+  </style>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- ปุ่มย่อขยายเมนูซ้าย -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index.php" class="nav-link">หน้าหลัก</a>
+      </li>
+    </ul>
+
+    <!-- ด้านขวา: ปุ่มสลับธีมมืด/สว่าง -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item d-flex align-items-center">
+        <div class="custom-control custom-switch m-0">
+          <input type="checkbox" class="custom-control-input" id="darkModeSwitch" aria-label="สลับโหมดมืด/สว่าง">
+          <label class="custom-control-label" for="darkModeSwitch" title="สลับโหมดมืด/สว่าง">
+            <i id="themeIcon" class="far fa-moon"></i>
+            <span class="d-none d-md-inline"> โหมดมืด</span>
+          </label>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index.php" class="brand-link">
+      <img src="img/moph.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">รพ.เชียงกลาง</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+          <li class="nav-item">
+            <a href="index.php" class="nav-link active">
+              <i class="nav-icon fas fa-home"></i>
+              <p>หน้าหลัก</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="" class="nav-link active">
+              <i class="nav-icon fas fa-dashboard">
+                <p>Dashboard</p>
+              </i>
+            </a>
+          </li>
+
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                กลุ่มคนไข้
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"><a href="patient.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>จิตเวช</p></a></li>
+              <li class="nav-item"><a href="drugitems01.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>กินยาอันตราย</p></a></li>
+              <li class="nav-item"><a href="sexual.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>ถูกทำร้าย</p></a></li>
+              <li class="nav-item"><a href="accident_queue_ui.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>อุบัติเหตุ พ.ร.บ.</p></a></li>
+              <li class="nav-item"><a href="fracture_queue_ui.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>พลัดตกหกล้ม</p></a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-virus"></i>
+              <p>
+                โรคระบาด
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"><a href="queue_ui.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Covid-19</p></a></li>
+              <li class="nav-item"><a href="dengue.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>ไข้เลือดออก</p></a></li>
+              <li class="nav-item"><a href="Leptospira.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>เลปโตสไปโรสิส</p></a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-file-prescription"></i>
+              <p>
+                งานเภสัชกรรม
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"><a href="pharm_lab_queue_ui.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>LabAlert</p></a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-gears"></i>
+              <p>
+                ตั้งค่าระบบ
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"><a href="db_config_admin.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>ตั้งค่าฐานข้อมูล</p></a></li>
+              <li class="nav-item"><a href="moph_keys_admin.php" class="nav-link"><i class="far fa-circle nav-icon"></i><p>ตั้งค่า MOPH NOTIFY / Client_ID & Secret</p></a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Logout (ติดด้านล่าง Sidebar) -->
+      <div class="sidebar-logout">
+        <!-- ใช้ href="#" แล้วค่อย redirect ด้วย SweetAlert2 -->
+        <a href="#" id="logoutBtn" class="nav-link bg-danger">
+          <i class="nav-icon fa-solid fa-right-from-bracket"></i>
+          <p class="mb-0">ออกจากระบบ</p>
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Content Wrapper -->
+  <!-- ใส่เนื้อหาของคุณที่นี่ -->
+
+</div>
+
+<!-- Scripts -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
+
+<!-- SweetAlert2 (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  // ====== Dark/Light Theme Toggle for AdminLTE 3 (+ Sidebar light/dark) ======
+  document.addEventListener('DOMContentLoaded', function () {
+    const STORAGE_KEY = 'adminlte-theme-mode';
+    const body  = document.body;
+    const nav   = document.querySelector('.main-header.navbar');
+    const aside = document.querySelector('.main-sidebar');
+    const sw    = document.getElementById('darkModeSwitch');
+    const icon  = document.getElementById('themeIcon');
+
+    function apply(mode){
+      if(mode === 'dark'){
+        body.classList.add('dark-mode');
+        nav.classList.remove('navbar-white','navbar-light');
+        nav.classList.add('navbar-dark','navbar-gray-dark');
+        aside.classList.remove('sidebar-light-primary');
+        aside.classList.add('sidebar-dark-primary');
+        sw.checked = true;
+        icon.classList.remove('fa-moon'); icon.classList.add('fa-sun');
+      }else{
+        body.classList.remove('dark-mode');
+        nav.classList.add('navbar-white','navbar-light');
+        nav.classList.remove('navbar-dark','navbar-gray-dark');
+        aside.classList.remove('sidebar-dark-primary');
+        aside.classList.add('sidebar-light-primary');
+        sw.checked = false;
+        icon.classList.remove('fa-sun'); icon.classList.add('fa-moon');
+      }
+      localStorage.setItem(STORAGE_KEY, mode);
+    }
+
+    const saved = localStorage.getItem(STORAGE_KEY);
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    apply(saved ? saved : (prefersDark ? 'dark' : 'light'));
+
+    sw.addEventListener('change', (e) => apply(e.target.checked ? 'dark' : 'light'));
+  });
+
+  // ====== Logout Confirm (SweetAlert2) ======
+  document.addEventListener('DOMContentLoaded', function () {
+    const logoutBtn = document.getElementById('logoutBtn');
+    if(!logoutBtn) return;
+
+    logoutBtn.addEventListener('click', function(e){
+      e.preventDefault();
+
+      Swal.fire({
+        title: 'ยืนยันออกจากระบบ?',
+        text: 'คุณต้องการออกจากระบบใช่หรือไม่',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'ออกจากระบบ',
+        cancelButtonText: 'ยกเลิก',
+        reverseButtons: true,
+        focusCancel: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // เปลี่ยนเส้นทางไปไฟล์ logout.php
+          window.location.href = 'logout.php';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
