@@ -1,5 +1,5 @@
 <?php
-// config.php
+// config.php คอนฟิกกลางของโปรเจกต์
 
 // ถ้าต้องการให้ไฟล์อื่นเรียกใช้ config.php แต่ "ไม่ต่อ DB"
 // ให้ define CONFIG_SKIP_DB ก่อน require ไฟล์นี้
@@ -27,11 +27,11 @@ $DB_CFG_FILE = $DB_CFG_DIR . DIRECTORY_SEPARATOR . 'db_config.json';
 
 // ค่า default เผื่อกรณียังไม่เคยตั้งผ่านหน้าเว็บ
 $dbCfg = [
-  'host' => '192.168.1.249',
+  'host' => '', // ip server (แนะนำเป็น Slave เท่านั้นไม่ควรใช้ฐานหลัก)
   'port' => 3306,
-  'name' => 'hosxp',
-  'user' => 'root',
-  'pass' => 'comsci',
+  'name' => '', // ชื่อฐานข้อมูล
+  'user' => '', // username
+  'pass' => '', // รหัสผ่าน
 ];
 
 // ถ้ามีไฟล์ config จากหน้าเว็บให้โหลดทับค่า default
