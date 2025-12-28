@@ -1,4 +1,5 @@
 <?php
+// ส่งออก logs ของ covid
 require_once 'db.php';
 header('Content-Type: text/csv');
 header('Content-Disposition: attachment; filename="covid_log.csv"');
