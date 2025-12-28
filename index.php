@@ -1,4 +1,5 @@
 <?php 
+// หน้า Menu ของระบบทั้งหมด
 require_once __DIR__ . '/auth_guard.php';
 session_start();
 if (empty($_SESSION['user'])) {
