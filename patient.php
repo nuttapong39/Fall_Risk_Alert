@@ -1,5 +1,5 @@
 <?php
-
+// ระบบแจ้งเตือนคนไข้ กลุ่มงานจิตเวช
    require_once('server.php');
    require_once('index1.html');
 ?>
