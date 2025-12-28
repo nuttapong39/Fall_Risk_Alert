@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/config.php';
-// require_once __DIR__ . '/auth_guard.php';
+// require_once __DIR__ . '/auth_guard.php'; รอ version ถัดไป
 require_once('index1.html');  // ถ้าหน้านี้มี header()/redirect อย่าเรียกหลังจากบรรทัดนี้
 date_default_timezone_set('Asia/Bangkok');
 
