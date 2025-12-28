@@ -1,6 +1,7 @@
 <?php
+// หน้าสำหรับตั้งค่าการเชื่อมต่อฐานข้อมูลของระบบทั้งหมด
 // db_config_admin.php
-// หน้าเว็บสำหรับตั้งค่า DB_HOST / DB_PORT / DB_NAME / DB_USER / DB_PASS
+// หน้าเว็บสำหรับตั้งค่า DB_HOST / DB_PORT / DB_NAME / DB_USER / DB_PASS 
 
 // ข้ามการต่อ DB เวลาโหลด config.php (กันกรณีตั้งค่าเดิมผิด)
 define('CONFIG_SKIP_DB', true);
