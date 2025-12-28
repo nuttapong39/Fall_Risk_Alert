@@ -1,5 +1,5 @@
 <?php
-/**
+/** 	สคริปต์หลักของระบบ covid
  * covid.php — Ingest + ส่งแจ้งเตือนผู้ป่วย COVID ผ่าน MOPH Alert (หรือ email/file ตาม DRIVER)
  * ใช้ร่วมกับ queue_ui.php และ queue_action.php
  */
