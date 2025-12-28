@@ -1,5 +1,6 @@
 
 <?php
+// ระบบแจ้งเตือนคนไข้โรคฉี่หนู Leptospira
 
 require_once ('server.php');
 require_once ('index1.html');
