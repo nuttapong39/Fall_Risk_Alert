@@ -17,15 +17,20 @@ $file = $dir . DIRECTORY_SEPARATOR . 'db_config.json';
 $now = date('Y-m-d H:i:s');
 $msg = ''; $err = '';
 
-// ค่า default (ต้องตรงกับใน config.php)
+
+// ค่า default (ต้องตรงกับใน config.php)  ********************************* จำเป็นต้องกรอก *********************************
+
+
 $current = [
-  'host' => $DB_HOST ?? '192.168.1.249',
-  'port' => $DB_PORT ?? 3306,
-  'name' => $DB_NAME ?? 'hosxp',
-  'user' => $DB_USER ?? 'root',
-  'pass' => $DB_PASS ?? 'comsci',
+  'host' => $DB_HOST ?? '',
+  'port' => $DB_PORT ?? 3306, 
+  'name' => $DB_NAME ?? '',
+  'user' => $DB_USER ?? '',
+  'pass' => $DB_PASS ?? '',
 ];
 
+
+// ค่า default (ต้องตรงกับใน config.php)  ********************************* จำเป็นต้องกรอก *********************************
 // ถ้ามีไฟล์ db_config.json ให้โหลดมาทับค่า default
 if (is_readable($file)) {
   $j = json_decode(@file_get_contents($file), true);
