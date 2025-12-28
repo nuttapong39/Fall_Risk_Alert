@@ -1,4 +1,6 @@
 <?php
+// dashboard รวมของระบบ Fracture
+
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/covid_lib.php';
 require_once('index1.html');
