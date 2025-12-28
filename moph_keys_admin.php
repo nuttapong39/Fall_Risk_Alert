@@ -1,4 +1,6 @@
 <?php
+// หน้าตั้งค่า Client key & Secreat Key ที่ได้จาก Moph Notify ของทุกระบบ
+
 // moph_keys_admin.php
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/auth_guard.php';
