@@ -1,4 +1,5 @@
 <?php
+// หน้า logout
 session_start();
 
 // ล้างค่า session ทั้งหมด
