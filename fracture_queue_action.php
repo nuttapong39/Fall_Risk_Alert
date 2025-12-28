@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/config.php';
-// require_once __DIR__ . '/auth_guard.php';
+// require_once __DIR__ . '/auth_guard.php';  รอ version ถัดไป
 require_once __DIR__ . '/covid_lib.php'; // มี to_utf8(), row_to_utf8()
 
 date_default_timezone_set('Asia/Bangkok');
