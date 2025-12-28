@@ -1,4 +1,6 @@
 <?php
+	
+// สคริปต์หลักของระบบ Lab แจ้งสถานะ ค่า INR สูง
 /**
  * pharm_lab.php — แจ้งเตือน LAB วิกฤตห้องยา (INR / Depakin / Lithium / Phenytoin)
  * STEP 1: Ingest → pharm_lab_queue
