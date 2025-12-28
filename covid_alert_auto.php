@@ -1,5 +1,5 @@
 <?php
-// config
+// config ระบบ
 $host = "192.168.1.249";
 $dbname = "hosxp";
 $user = "root";
