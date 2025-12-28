@@ -1,6 +1,6 @@
 
 <?php
-
+// ระบบแจ้งเตือนไข้เลือดออก Dengue
 require_once ('server.php');
 require_once __DIR__ . '/auth_guard.php';
 require_once ('index1.html');
