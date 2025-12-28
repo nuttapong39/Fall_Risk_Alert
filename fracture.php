@@ -490,3 +490,5 @@ foreach ($queue as $row){
 if (PHP_SAPI !== 'cli'){
   echo "<pre>Done: start={$start} end={$end} hosp={$hosp} dryRun=".($dryRun?'1':'0')."</pre>";
 }
+
+// Upload to Github
