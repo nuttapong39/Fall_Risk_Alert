@@ -1,5 +1,5 @@
 <?php
-// covid_lib.php — helpers สำหรับ COVID queue UI (โค้ดนี้ตั้งชื่อฟังก์ชันเป็น covid_* เพื่อไม่ชนกับไฟล์อื่น)
+// covid_lib.php — helpers สำหรับ COVID queue UI (โค้ดนี้ตั้งชื่อฟังก์ชันเป็น covid_* เพื่อไม่ชนกับไฟล์อื่นๆ)
 date_default_timezone_set('Asia/Bangkok');
 
 /* -------------------- Encoding helpers -------------------- */
