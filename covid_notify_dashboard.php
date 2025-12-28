@@ -7,7 +7,7 @@ $filterDoctor = $_GET['doctor'] ?? '';
 $startDate = $_GET['start'] ?? date('Y-m-01');
 $endDate = $_GET['end'] ?? date('Y-m-d');
 
-// สร้าง SQL
+// สร้าง SQL ระบบ
 $sql = "SELECT pt.hn,
          CONCAT(pt.pname, pt.fname, ' ', pt.lname) AS fullname,
          TIMESTAMPDIFF(YEAR, pt.birthday, CURDATE()) AS age,
