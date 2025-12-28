@@ -31,6 +31,7 @@ $current = [
 
 
 // ค่า default (ต้องตรงกับใน config.php)  ********************************* จำเป็นต้องกรอก *********************************
+
 // ถ้ามีไฟล์ db_config.json ให้โหลดมาทับค่า default
 if (is_readable($file)) {
   $j = json_decode(@file_get_contents($file), true);
