@@ -1,7 +1,7 @@
 @echo off
 setlocal
 set "PHP_EXE=C:\xampp\php\php.exe"
-set "APP_DIR=C:\xampp\htdocs\HOSxLine"
+set "APP_DIR=C:\xampp\htdocs\Fall_Risk_Alert"
 set "SCRIPT=%APP_DIR%\fracture.php"
 set "LOGDIR=%APP_DIR%\logs"
 if not exist "%LOGDIR%" mkdir "%LOGDIR%"
