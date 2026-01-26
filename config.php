@@ -27,11 +27,11 @@ $DB_CFG_FILE = $DB_CFG_DIR . DIRECTORY_SEPARATOR . 'db_config.json';
 
 // ค่า default เผื่อกรณียังไม่เคยตั้งผ่านหน้าเว็บ
 $dbCfg = [
-  'host' => '192.168.1.249',
+  'host' => '',
   'port' => 3306,
-  'name' => 'hosxp',
-  'user' => 'root',
-  'pass' => 'comsci',
+  'name' => '',
+  'user' => '',
+  'pass' => '',
 ];
 
 // ถ้ามีไฟล์ config จากหน้าเว็บให้โหลดทับค่า default
